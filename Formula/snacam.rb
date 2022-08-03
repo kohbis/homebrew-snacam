@@ -5,20 +5,20 @@
 class Snacam < Formula
   desc "Convert Strings to Specified Case"
   homepage "https://github.com/kohbis/snacam"
-  version "0.0.1"
+  version "0.1.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/kohbis/snacam/releases/download/v0.0.1/snacam_0.0.1_Darwin_arm64.tar.gz"
-      sha256 "f1ecd42facc39686dde5b5c9e2ecb782b1b163ea6ffa12fa33f5059c4b669fdf"
+    if Hardware::CPU.intel?
+      url "https://github.com/kohbis/snacam/releases/download/v0.1.0/snacam_0.1.0_Darwin_x86_64.tar.gz"
+      sha256 "754e4470cd1f25538192c8107f8ba8d9907b3334ac6a8efdfe9227c7693aeb52"
 
       def install
         bin.install "snacam"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kohbis/snacam/releases/download/v0.0.1/snacam_0.0.1_Darwin_x86_64.tar.gz"
-      sha256 "0c730fa035bd204aa7d3f40c59e31de8e96220c0914f3fc65af6fe1b7d166cdc"
+    if Hardware::CPU.arm?
+      url "https://github.com/kohbis/snacam/releases/download/v0.1.0/snacam_0.1.0_Darwin_arm64.tar.gz"
+      sha256 "0211d58e410dbb32fd4fd6d5cd4a644f3fc43dffb0fb93a2d1c1885bea37250c"
 
       def install
         bin.install "snacam"
@@ -27,17 +27,17 @@ class Snacam < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kohbis/snacam/releases/download/v0.0.1/snacam_0.0.1_Linux_arm64.tar.gz"
-      sha256 "ce659793ca0070453f44024904c3f27fe0aafe41294c183e1c8d2d4690b92738"
+    if Hardware::CPU.intel?
+      url "https://github.com/kohbis/snacam/releases/download/v0.1.0/snacam_0.1.0_Linux_x86_64.tar.gz"
+      sha256 "b049a648f5faedf2c8bdf6aaa128ce888fe02c92e707db21785a6343b7e802cf"
 
       def install
         bin.install "snacam"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kohbis/snacam/releases/download/v0.0.1/snacam_0.0.1_Linux_x86_64.tar.gz"
-      sha256 "da8068c011e601216aec3388e52ddda92aa91d9661d799aea43ba3c863491bd6"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kohbis/snacam/releases/download/v0.1.0/snacam_0.1.0_Linux_arm64.tar.gz"
+      sha256 "0d25198d670efaf47dfe2901613557acc1664728f901d204e379ead026e2ac9c"
 
       def install
         bin.install "snacam"
