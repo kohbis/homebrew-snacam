@@ -5,20 +5,20 @@
 class Snacam < Formula
   desc "Convert Strings to Specified Case"
   homepage "https://github.com/kohbis/snacam"
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/kohbis/snacam/releases/download/v0.1.1/snacam_0.1.1_Darwin_arm64.tar.gz"
-      sha256 "db56407f480864b687211379635d5900ddd4cd8f6065e960ffcce151e3dfb868"
+    if Hardware::CPU.intel?
+      url "https://github.com/kohbis/snacam/releases/download/v0.1.2/snacam_0.1.2_Darwin_x86_64.tar.gz"
+      sha256 "ca23355109af04444a7672a11f84bb22d371057e573bcc82a5aa1bc0f4ce3bc3"
 
       def install
         bin.install "snacam"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kohbis/snacam/releases/download/v0.1.1/snacam_0.1.1_Darwin_x86_64.tar.gz"
-      sha256 "7d82332651c583116dcd682d0e43ddd081fe86d4cfe20e91ec12f8002e4fd588"
+    if Hardware::CPU.arm?
+      url "https://github.com/kohbis/snacam/releases/download/v0.1.2/snacam_0.1.2_Darwin_arm64.tar.gz"
+      sha256 "f765b76b337d9617473cee1368b63f0512b7e384b758fbc25683e84a13b32847"
 
       def install
         bin.install "snacam"
@@ -28,16 +28,16 @@ class Snacam < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kohbis/snacam/releases/download/v0.1.1/snacam_0.1.1_Linux_arm64.tar.gz"
-      sha256 "4adb00f6b407ed8f37235cb3ea6ad9245ed0c8922e369409d62271129210b2af"
+      url "https://github.com/kohbis/snacam/releases/download/v0.1.2/snacam_0.1.2_Linux_arm64.tar.gz"
+      sha256 "73df33e806fd5eb0230231a845a568457765d09e3fc1dcb63672ce17d7cf232f"
 
       def install
         bin.install "snacam"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kohbis/snacam/releases/download/v0.1.1/snacam_0.1.1_Linux_x86_64.tar.gz"
-      sha256 "94963cf558c325690d942014b75a86a38c13bf29518e2dc0bef50044292434c9"
+      url "https://github.com/kohbis/snacam/releases/download/v0.1.2/snacam_0.1.2_Linux_x86_64.tar.gz"
+      sha256 "c7c79b452725ca03bb93822d7d1125e3c8dd6e22fe493d57effb07c645865132"
 
       def install
         bin.install "snacam"
